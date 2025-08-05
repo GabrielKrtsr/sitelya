@@ -28,7 +28,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 const rateLimit = require('express-rate-limit');
 const contactLimiter = rateLimit({
     windowMs: 60 * 60 * 1000, // 1 heure
-    max: 5,
+    max: 20,
     message: { message: 'Trop de messages envoyés. Réessayez plus tard.' }
 });
 app.use('/api/contact', contactLimiter, contactApiRouter);

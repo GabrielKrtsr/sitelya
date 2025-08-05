@@ -86,6 +86,7 @@ ul {
     z-index: 1000;
     padding: 15px 0;
 }
+
 .imglogo {
     background-color: #fff;
     max-width: 200px;
@@ -100,10 +101,10 @@ ul {
 }
 
 @media (max-width: 600px) {
-  .imglogo {
-    max-width: 70px;
-    padding: 4px 6px;
-  }
+    .imglogo {
+        max-width: 70px;
+        padding: 4px 6px;
+    }
 }
 
 .header .container {
@@ -189,7 +190,8 @@ ul {
     content: "";
     position: absolute;
     inset: 0;
-    background: rgba(0, 0, 0, 0.4); /* un léger assombrissement pour lisibilité */
+    background: rgba(0, 0, 0, 0.4);
+    /* un léger assombrissement pour lisibilité */
     z-index: 1;
 }
 
@@ -279,7 +281,8 @@ ul {
     transition: var(--transition);
     text-align: center;
     border: 2px solid transparent;
-    border-bottom-width: 6px; /* bordure plus large en bas */
+    border-bottom-width: 6px;
+    /* bordure plus large en bas */
 }
 
 .service-card:hover {
@@ -385,6 +388,7 @@ ul {
     background-size: cover;
     background-position: center;
 }
+
 .image-about {
     background-color: var(--light-gray);
     border-radius: var(--border-radius);
@@ -394,19 +398,29 @@ ul {
     background-size: cover;
     background-position: center;
 }
-/* Skills */
-.skills {
+
+/* Expertise technique (anciennement Skills) */
+.expertise {
     padding: 60px 0;
     background-color: var(--light-gray);
 }
 
-.skills h2 {
+.expertise h2 {
     text-align: center;
     margin-bottom: 50px;
     color: var(--primary-color);
 }
 
-.skills-grid {
+.expertise p {
+    text-align: center;
+    margin-bottom: 30px;
+    color: var(--text-light);
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.expertise-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 30px;
@@ -417,6 +431,12 @@ ul {
     padding: 30px;
     border-radius: var(--border-radius);
     box-shadow: var(--box-shadow);
+    transition: var(--transition);
+}
+
+.skill-category:hover {
+    transform: translateY(-10px);
+    border-color: var(--primary-color);
 }
 
 .skill-category h3 {
@@ -437,6 +457,48 @@ ul {
     left: 0;
     color: var(--secondary-color);
 }
+
+/* Timeline */
+.timeline {
+    background-color: var(--white);
+    padding: 60px 0;
+}
+
+.timeline h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    color: var(--primary-color);
+}
+
+.timeline-list {
+    list-style: none;
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.timeline-list li {
+    position: relative;
+    padding-left: 1.8rem;
+    margin-bottom: 1.5rem;
+    color: var(--text-color);
+}
+
+.timeline-list li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0.2rem;
+    width: 10px;
+    height: 10px;
+    background-color: var(--secondary-color);
+    border-radius: 50%;
+}
+
+.timeline-list li strong {
+    color: var(--primary-color);
+}
+
 
 /* Contact page */
 .contact-hero {
@@ -566,12 +628,13 @@ ul {
 
 /* Responsive */
 @media (max-width: 992px) {
+
     .about-grid,
     .contact-grid {
         grid-template-columns: 1fr;
         gap: 30px;
     }
-    
+
     .about-image {
         order: -1;
         height: 300px;
@@ -591,36 +654,36 @@ ul {
         box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
         transition: var(--transition);
     }
-    
+
     .nav.active {
         left: 0;
     }
-    
+
     .nav ul {
         flex-direction: column;
         gap: 20px;
     }
-    
+
     .menu-toggle {
         display: block;
     }
-    
+
     .menu-toggle.active span:nth-child(1) {
         transform: rotate(45deg) translate(5px, 5px);
     }
-    
+
     .menu-toggle.active span:nth-child(2) {
         opacity: 0;
     }
-    
+
     .menu-toggle.active span:nth-child(3) {
         transform: rotate(-45deg) translate(7px, -6px);
     }
-    
+
     .hero h1 {
         font-size: 2rem;
     }
-    
+
     .hero p {
         font-size: 1rem;
     }
@@ -630,11 +693,11 @@ ul {
     .services-grid {
         grid-template-columns: 1fr;
     }
-    
+
     .hero {
         padding: 120px 0 80px;
     }
-    
+
     .hero h1 {
         font-size: 1.8rem;
     }
